@@ -7,6 +7,11 @@
          <div class="title pb-5">
            <h2 class="font-weight-bold">Login System</h2>
             <span>Login for the existing user</span>
+            <%if(locals.logout){%>
+                <div class="alter alert-success text-center">
+                     <%=logout %>
+                </div>
+            <%}%>
             <form action="/route/login" method="POST" class="pt-3">
                 <div class="form-group">
                     <input type="email" class="form-control" placeholder="email" name="email">
